@@ -1,0 +1,51 @@
+{
+  "name": "canexpressive",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main",
+  "files": [
+    "src/js"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cherif BOUCHELAGHEM",
+  "license": "MIT",
+  "dependencies": {
+    "can-component": "^3.0.4",
+    "can-compute": "^3.0.5",
+    "can-connect": "^1.0.21",
+    "can-define": "^1.0.10",
+    "can-jquery": "^3.0.3",
+    "can-route": "^3.0.6",
+    "can-route-pushstate": "^3.0.1",
+    "can-set": "^1.0.3",
+    "can-stache": "^3.0.17",
+    "can-stache-bindings": "^3.0.6",
+    "done-component": "^0.6.0-pre.2",
+    "generator-donejs": "^0.10.0-pre.4",
+    "steal": "^1.0.5",
+    "steal-stache": "^3.0.4",
+    "yeoman-environment": "^1.6.6"
+  },
+  "devDependencies": {
+    "can-fixture": "^1.0.11",
+    "donejs-cli": "^0.10.0-pre.4",
+    "steal-tools": "^1.0.1"
+  },
+  "system": {
+    "directories": {
+      "lib": "src/js"
+    },
+    "main": "main",
+    "configDependencies": [
+      "live-reload"
+    ],
+    "npmAlgorithm": "flat",
+    "npmIgnore": [
+      "documentjs",
+      "testee",
+      "steal-tools"
+    ]
+  }
+}

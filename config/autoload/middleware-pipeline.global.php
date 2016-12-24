@@ -7,6 +7,12 @@ return [
         'factories' => [
             Helper\ServerUrlMiddleware::class => Helper\ServerUrlMiddlewareFactory::class,
             Helper\UrlHelperMiddleware::class => Helper\UrlHelperMiddlewareFactory::class,
+
+            \Doctrine\Common\Cache\Cache::class 
+                =>CanExpressive\Api\Container\DoctrineFilesystemCacheFactory::class,
+            \CanExpressive\Api\Middleware\CacheMiddleware::class
+                =>CanExpressive\Api\Container\CacheMiddlewareFactory::class    
+
         ],
     ],
     // This can be used to seed pre- and/or post-routing middleware
@@ -38,8 +44,9 @@ return [
                 // every request:
                 // - bootstrapping
                 // - pre-conditions
-                // - modifications to outgoing responses
+                // - modifications to outgoing responses                
                 Helper\ServerUrlMiddleware::class,
+                \CanExpressive\Api\Middleware\CacheMiddleware::class
             ],
             'priority' => 10000,
         ],

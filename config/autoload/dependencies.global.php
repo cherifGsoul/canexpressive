@@ -17,10 +17,12 @@ return [
         ],
         // Use 'factories' for services provided by callbacks/factory classes.
         'factories' => [
-          \CanExpressive\UI\Main::class => \CanExpressive\UI\Container\MainFactory::class,
-          'CanExpressive\Api' => ApplicationFactory::class,
+          \CanExpressive\UI\Main::class => \CanExpressive\UI\Container\MainFactory::class,                    
             Application::class => ApplicationFactory::class,
             Helper\UrlHelper::class => Helper\UrlHelperFactory::class,
         ],
+        'aliases'=>[
+            'CanExpressive\Api' => ApplicationFactory::class,
+        ]
     ],
 ];
